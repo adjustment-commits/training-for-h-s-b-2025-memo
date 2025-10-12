@@ -6,12 +6,26 @@
 <title>Lesson01 骨盤 × 胸郭 トレーニングメモ（選手用）</title>
 <style>
   @page { size: A4 landscape; margin: 12mm; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #fff;
+  background-image: url("https://raw.githubusercontent.com/adjustment-commits/training-for-h-s-b-2025-memo/main/lesson01/A_pair_of_black_and_white_anatomical_line_drawings.png");
+  background-repeat: no-repeat;
+  background-position: center 260px; /* ← 下に少し下げる */
+  background-size: 80%; /* ← 背景を少し小さく */
+  background-attachment: fixed;
+  color: #111;
+}
+  @media print {
   body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background: #fff url("https://raw.githubusercontent.com/adjustment-commits/training-for-h-s-b-2025-memo/main/lesson01/A_pair_of_black_and_white_anatomical_line_drawings.png") no-repeat center;
-    background-size: contain;
-    color: #111;
-  }
+    background-color: #fff;
+    background-image: url("https://raw.githubusercontent.com/adjustment-commits/training-for-h-s-b-2025-memo/main/lesson01/A_pair_of_black_and_white_anatomical_line_drawings.png");
+    background-repeat: no-repeat;
+    background-position: center 240px;
+    background-size: 70%;
+    opacity: 1;
+    -webkit-print-color-adjust: exact; /* ← 印刷時に淡い色も出力 */
+}
   h1 {
     font-size: 18pt;
     color: #c33;

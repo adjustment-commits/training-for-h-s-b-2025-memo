@@ -73,29 +73,27 @@ h2 {
   right: 5mm;
   text-align: center;
 }
-
 .qr img {
   width: 28mm;
   height: 28mm;
   display: block;
   margin: 0 auto 1mm;
 }
-
 .qr small {
   font-size: 8pt;
   color: #333;
 }
 
-/* ✅ 骨格図：頭を下げた（「②」くらいの高さに） */
+/* 骨格図：②の高さに合わせた */
 .diagram {
   width: 90%;
   opacity: 0.35;
   position: absolute;
-  top: 70mm;  
+  top: 52mm;
   left: 5%;
 }
 
-/* 「骨盤と胸郭の位置関係をイメージしよう」は位置固定 */
+/* キャプションは固定 */
 .caption {
   font-size: 9pt;
   color: #555;
@@ -103,12 +101,13 @@ h2 {
   margin-top: 145mm;
 }
 
+/* ✅ チェック表を自由メモ欄下端と水平に合わせる */
 table {
   width: 100%;
   border-collapse: collapse;
   font-size: 9.5pt;
   position: absolute;
-  bottom: 0;
+  bottom: 6mm; /* ← 左の自由メモ欄下端（ページ下6mm余白と一致） */
 }
 
 th, td {
@@ -116,7 +115,6 @@ th, td {
   padding: 3px;
   text-align: center;
 }
-
 th {
   background: #f8f8f8;
 }
@@ -155,20 +153,21 @@ th {
   <!-- 右側：骨格図＋チェック表＋QR -->
   <div class="side">
 
-    <!-- ✅ QRコード -->
+    <!-- QRコード -->
     <div class="qr">
       <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://adjustment-commits.github.io/training-for-h-s-b-2025/"
            alt="QRコード">
       <small>https://adjustment-commits.github.io/training-for-h-s-b-2025/</small>
     </div>
 
-    <!-- ✅ 骨格図（下げた位置） -->
+    <!-- 骨格図 -->
     <img class="diagram"
          src="A_pair_of_black_and_white_anatomical_line_drawings.png"
          alt="骨盤と胸郭の線画">
 
     <div class="caption">骨盤と胸郭の位置関係をイメージしよう</div>
 
+    <!-- ✅ チェック表：左の自由メモ欄と最下部を揃える -->
     <table>
       <tr><th>項目</th><th>◯</th><th>△</th><th>×</th></tr>
       <tr><td>骨盤の動きを理解できた</td><td>☐</td><td>☐</td><td>☐</td></tr>

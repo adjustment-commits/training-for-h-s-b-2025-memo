@@ -17,6 +17,7 @@ html, body {
   print-color-adjust: exact;
   overflow: hidden;
 }
+
 .page {
   position: relative;
   width: 285mm;
@@ -26,29 +27,34 @@ html, body {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .main {
   width: 68%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
+
 h1 {
   font-size: 18pt;
   color: #c33;
   margin: 0 0 6mm 2mm;
   font-weight: 700;
 }
+
 h2 {
   font-size: 11.5pt;
   border-left: 4px solid #c33;
   padding-left: 5px;
   margin: 3mm 0 1.5mm;
 }
+
 .memo {
   border: 1px solid #999;
   height: 32mm;
   margin-bottom: 2.5mm;
 }
+
 .memo.large { height: 40mm; }
 
 .side {
@@ -60,38 +66,43 @@ h2 {
   align-items: center;
 }
 
-/* ✅ QRコード（骨格図の上に配置） */
+/* ✅ QRコード（右上固定） */
 .qr {
   position: absolute;
-  top: 5mm;         /* ページ上端からの距離 */
-  right: 5mm;       /* ページ右端からの距離 */
+  top: 5mm;
+  right: 5mm;
   text-align: center;
 }
+
 .qr img {
   width: 28mm;
   height: 28mm;
   display: block;
   margin: 0 auto 1mm;
 }
+
 .qr small {
   font-size: 8pt;
   color: #333;
 }
 
-/* 骨格図 */
+/* ✅ 骨格図：頭を下げた（「②」くらいの高さに） */
 .diagram {
   width: 90%;
   opacity: 0.35;
   position: absolute;
-  top: 42mm; /* ← QRコードより下に配置 */
+  top: 72mm;  /* ← 以前: 42mm → 下に30mm下げた */
   left: 5%;
 }
+
+/* 「骨盤と胸郭の位置関係をイメージしよう」は位置固定 */
 .caption {
   font-size: 9pt;
   color: #555;
   text-align: center;
   margin-top: 145mm;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -99,18 +110,24 @@ table {
   position: absolute;
   bottom: 0;
 }
+
 th, td {
   border: 1px solid #888;
   padding: 3px;
   text-align: center;
 }
+
 th {
   background: #f8f8f8;
 }
 
 @page { size: A4 landscape; margin: 0; }
+
 @media print {
-  html, body { transform: scale(0.94); transform-origin: top left; }
+  html, body {
+    transform: scale(0.94);
+    transform-origin: top left;
+  }
 }
 </style>
 </head>
@@ -145,9 +162,11 @@ th {
       <small>https://adjustment-commits.github.io/training-for-h-s-b-2025/</small>
     </div>
 
+    <!-- ✅ 骨格図（下げた位置） -->
     <img class="diagram"
          src="A_pair_of_black_and_white_anatomical_line_drawings.png"
          alt="骨盤と胸郭の線画">
+
     <div class="caption">骨盤と胸郭の位置関係をイメージしよう</div>
 
     <table>

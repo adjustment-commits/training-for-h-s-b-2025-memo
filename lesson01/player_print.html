@@ -29,7 +29,7 @@
     margin: 0 auto;
   }
 
-  /* 左エリア（思考・記入） */
+  /* 左：記入欄ゾーン */
   .main {
     padding-left: 5mm;
     display: flex;
@@ -40,15 +40,21 @@
     font-size: 18pt;
     color: #c33;
     font-weight: 700;
-    margin: 0 0 2mm 0;
+    margin-bottom: 4px;
   }
 
-  .objective {
-    font-size: 10.5pt;
-    color: #333;
-    border-left: 4px solid #c33;
-    padding-left: 6px;
-    margin-bottom: 6mm;
+  /* 上部の余白（氏名欄削除→思考スペースに） */
+  .top-space {
+    height: 35mm;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+
+  .section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .section h2 {
@@ -61,22 +67,22 @@
 
   .memo {
     border: 1px solid #999;
-    height: 70px;
+    height: 68px;
     margin-bottom: 10px;
   }
 
   .memo.large {
-    height: 90px;
+    height: 85px;
   }
 
-  /* 右エリア（図＋チェック） */
+  /* 右：構造と自己チェック */
   .side {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-top: 5mm;
-    padding-bottom: 3mm;
+    padding-top: 4mm;
+    padding-bottom: 2mm;
   }
 
   .diagram {
@@ -90,7 +96,7 @@
     text-align: center;
     color: #444;
     margin-top: -3mm;
-    margin-bottom: 6mm;
+    margin-bottom: 5mm;
   }
 
   .side h3 {
@@ -136,29 +142,37 @@
 
 <div class="page">
 
-  <!-- 左：書き込みエリア -->
+  <!-- 左：思考と気づき -->
   <div class="main">
-    <h1>Lesson01　骨盤 × 胸郭 トレーニングメモ</h1>
-    <div class="objective">
-      野球動作における「骨盤と胸郭の連動」を理解し、動作の基盤をつくる。
-    </div>
+    <h1>Lesson01　骨盤 × 胸郭 トレーニングメモ（選手用）</h1>
+
+    <!-- 思考スペース（氏名欄削除後） -->
+    <div class="top-space"></div>
 
     <div class="section">
-      <h2>① 動きを見て感じたこと</h2>
-      <div class="memo"></div>
+      <div>
+        <h2>① 動きを見て感じたこと</h2>
+        <div class="memo"></div>
+      </div>
 
-      <h2>② 実際に動かして気づいたこと</h2>
-      <div class="memo"></div>
+      <div>
+        <h2>② 実際に動かして気づいたこと</h2>
+        <div class="memo"></div>
+      </div>
 
-      <h2>③ 次回までに意識したいこと</h2>
-      <div class="memo"></div>
+      <div>
+        <h2>③ 次回までに意識したいこと</h2>
+        <div class="memo"></div>
+      </div>
 
-      <h2>自由メモ欄</h2>
-      <div class="memo large"></div>
+      <div>
+        <h2>自由メモ欄</h2>
+        <div class="memo large"></div>
+      </div>
     </div>
   </div>
 
-  <!-- 右：図とチェック -->
+  <!-- 右：構造と評価 -->
   <div class="side">
     <div>
       <img class="diagram"

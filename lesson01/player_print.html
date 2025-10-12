@@ -14,24 +14,34 @@
     width: 100%;
     max-width: 297mm;
     margin: 0 auto;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
   }
 
-  /* 右下に小さく配置するイメージ */
-  .diagram {
-    position: absolute;
-    bottom: 12mm;
-    right: 12mm;
-    width: 25%;          /* ← 控えめなサイズ感 */
-    opacity: 0.5;        /* ← 強調しすぎない */
-    z-index: 0;
+  /* 左：メイン記入領域 */
+  .main {
+    flex: 0 0 68%;
+  }
+
+  /* 右：イラスト領域 */
+  .side {
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10mm;
+  }
+
+  .side img {
+    width: 95%;
+    opacity: 0.35;
   }
 
   h1 {
     font-size: 18pt;
     color: #c33;
     margin-bottom: 6px;
-    text-align: left;
   }
   .info {
     border-bottom: 1px solid #999;
@@ -45,8 +55,6 @@
   }
   .section {
     margin-top: 10px;
-    position: relative;
-    z-index: 1;
   }
   .section h2 {
     font-size: 12pt;
@@ -61,7 +69,7 @@
   }
   table {
     border-collapse: collapse;
-    width: 95%;
+    width: 100%;
     font-size: 10pt;
     margin-top: 6px;
   }
@@ -75,51 +83,56 @@
     body {
       -webkit-print-color-adjust: exact;
     }
-    .diagram {
-      opacity: 0.35; /* 印刷時はさらに淡く */
+    .side img {
+      opacity: 0.25;
     }
   }
 </style>
 </head>
 <body>
 
-<h1>Lesson01　骨盤 × 胸郭 トレーニングメモ（選手用）</h1>
+<div class="main">
 
-<div class="info">
-  <span>氏名：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</span>
-  <span>日付：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</span>
-  <span>トレーニング回数：＿＿＿＿回</span>
+  <h1>Lesson01　骨盤 × 胸郭 トレーニングメモ（選手用）</h1>
+
+  <div class="info">
+    <span>氏名：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</span>
+    <span>日付：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</span>
+    <span>トレーニング回数：＿＿＿＿回</span>
+  </div>
+
+  <div class="section">
+    <h2>① 動きを見て感じたこと</h2>
+    <div class="memo"></div>
+
+    <h2>② 実際に動かして気づいたこと</h2>
+    <div class="memo"></div>
+
+    <h2>③ 次回までに意識したいこと</h2>
+    <div class="memo"></div>
+  </div>
+
+  <div class="section">
+    <h2>自己チェック</h2>
+    <table>
+      <tr><th>項目</th><th>◯</th><th>△</th><th>×</th></tr>
+      <tr><td>骨盤の動きを理解できた</td><td>☐</td><td>☐</td><td>☐</td></tr>
+      <tr><td>胸郭との連動を感じた</td><td>☐</td><td>☐</td><td>☐</td></tr>
+      <tr><td>左右差に気づいた</td><td>☐</td><td>☐</td><td>☐</td></tr>
+      <tr><td>動きを言葉で説明できる</td><td>☐</td><td>☐</td><td>☐</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>自由メモ欄</h2>
+    <div class="memo" style="height:80px;"></div>
+  </div>
+
 </div>
 
-<div class="section">
-  <h2>① 動きを見て感じたこと</h2>
-  <div class="memo"></div>
-
-  <h2>② 実際に動かして気づいたこと</h2>
-  <div class="memo"></div>
-
-  <h2>③ 次回までに意識したいこと</h2>
-  <div class="memo"></div>
+<div class="side">
+  <img src="https://raw.githubusercontent.com/adjustment-commits/training-for-h-s-b-2025-memo/main/lesson01/A_pair_of_black_and_white_anatomical_line_drawings.png" alt="骨盤と胸郭の線画">
 </div>
-
-<div class="section">
-  <h2>自己チェック</h2>
-  <table>
-    <tr><th>項目</th><th>◯</th><th>△</th><th>×</th></tr>
-    <tr><td>骨盤の動きを理解できた</td><td>☐</td><td>☐</td><td>☐</td></tr>
-    <tr><td>胸郭との連動を感じた</td><td>☐</td><td>☐</td><td>☐</td></tr>
-    <tr><td>左右差に気づいた</td><td>☐</td><td>☐</td><td>☐</td></tr>
-    <tr><td>動きを言葉で説明できる</td><td>☐</td><td>☐</td><td>☐</td></tr>
-  </table>
-</div>
-
-<div class="section">
-  <h2>自由メモ欄</h2>
-  <div class="memo" style="height:80px;"></div>
-</div>
-
-<!-- イメージ：控えめに右下配置 -->
-<img class="diagram" src="https://raw.githubusercontent.com/adjustment-commits/training-for-h-s-b-2025-memo/main/lesson01/A_pair_of_black_and_white_anatomical_line_drawings.png" alt="骨盤と胸郭の線画">
 
 </body>
 </html>

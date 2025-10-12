@@ -5,10 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lesson01 骨盤 × 胸郭 トレーニングメモ（選手用）</title>
 <style>
-  /* ========== A4横／余白最小化設定 ========== */
+  /* ========== A4横／下余白修正版 ========== */
   @page {
     size: A4 landscape;
-    margin: 4mm; /* ← 最小限の印刷余白 */
+    margin-top: 4mm;
+    margin-left: 4mm;
+    margin-right: 4mm;
+    margin-bottom: 2mm; /* ← 下余白さらに圧縮 */
   }
 
   html, body {
@@ -25,15 +28,14 @@
   /* ========== 全体レイアウト ========== */
   .page {
     display: grid;
-    grid-template-columns: 71% 29%; /* 左：記入欄／右：図と表 */
-    column-gap: 10mm;
-    width: 289mm;   /* A4横 297mm - 左右余白4mm×2 */
-    height: 202mm;  /* A4縦 210mm - 上下余白4mm×2 */
+    grid-template-columns: 71% 29%;
+    column-gap: 9mm;
+    width: 289mm;
+    height: 204mm; /* ← ページ高を伸ばして下詰め */
     margin: 0 auto;
-    padding: 0;
   }
 
-  /* 左側：記入欄 */
+  /* 左：記入欄 */
   .main {
     padding-left: 3mm;
     padding-right: 2mm;
@@ -43,7 +45,7 @@
     font-size: 18pt;
     color: #c33;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .info {
@@ -70,27 +72,29 @@
 
   .memo {
     border: 1px solid #999;
-    height: 50px;
+    height: 52px;
     margin-bottom: 6px;
   }
 
   .memo.large {
-    height: 68px;
+    height: 70px;
   }
 
-  /* 右側：イラスト＋自己チェック */
+  /* 右：イラスト＋自己チェック */
   .side {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    padding-top: 5mm;
+    padding-bottom: 3mm;
   }
 
   .diagram {
-    width: 100%;
+    width: 92%;
     opacity: 0.28;
-    margin-bottom: 6px;
+    margin-bottom: 4mm;
   }
 
   .side h3 {
@@ -99,7 +103,7 @@
     color: #111;
     text-align: left;
     width: 100%;
-    margin: 2px 0 2px;
+    margin: 2px 0 3px;
   }
 
   table {
@@ -129,13 +133,12 @@
     }
     .page {
       width: 289mm;
-      height: 202mm;
+      height: 204mm;
     }
     .diagram {
       opacity: 0.25;
     }
   }
-
 </style>
 </head>
 <body>

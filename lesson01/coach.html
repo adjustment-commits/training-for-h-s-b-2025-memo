@@ -4,200 +4,129 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lesson01 骨盤 × 胸郭 トレーニングメモ（講師用）</title>
-
-<!-- 共通CSSの読み込み（shared配下） -->
-<link rel="stylesheet" href="../shared/css/base.css">
-
 <style>
-  @page {
-    size: A4 landscape;
-    margin: 6mm;
-  }
-
-  html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #111;
-  }
-
-  .page {
-    display: grid;
-    grid-template-columns: 65% 35%;
-    column-gap: 10mm;
-    width: 285mm;
-    height: 198mm;
-    margin: 0 auto;
-  }
-
-  .main {
-    padding-left: 5mm;
-    display: flex;
-    flex-direction: column;
-  }
-
-  h1 {
-    font-size: 18pt;
-    color: #c33;
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
-
-  .section {
-    margin-bottom: 10px;
-  }
-
-  .section h2 {
-    font-size: 11.5pt;
-    color: #222;
-    border-left: 4px solid #c33;
-    padding-left: 6px;
-    margin-bottom: 4px;
-  }
-
-  .logic {
-    font-size: 10.5pt;
-    line-height: 1.6;
-    color: #333;
-    border: 1px solid #bbb;
-    padding: 8px 10px;
-    background: #fafafa;
-    margin-bottom: 8px;
-  }
-
-  .memo {
-    border: 1px solid #aaa;
-    height: 85px;
-    margin-top: 4px;
-  }
-
-  /* 右：図＋観察チェック */
-  .side {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 4mm;
-    padding-bottom: 2mm;
-  }
-
-  .diagram {
-    width: 100%;
-    opacity: 0.33;
-    margin-bottom: 4mm;
-  }
-
-  .caption {
-    font-size: 10pt;
-    text-align: center;
-    color: #444;
-    margin-top: -2mm;
-    margin-bottom: 4mm;
-  }
-
-  .side h3 {
-    font-size: 12pt;
-    font-weight: 700;
-    color: #111;
-    text-align: left;
-    width: 100%;
-    margin: 3px 0;
-    border-left: 4px solid #c33;
-    padding-left: 6px;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 10pt;
-  }
-
-  th, td {
-    border: 1px solid #999;
-    padding: 4px;
-    text-align: left;
-  }
-
-  th {
-    background: #f8f8f8;
-    font-weight: 600;
-  }
-
-  @media print {
-    html, body {
-      width: 297mm;
-      height: 210mm;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-    .diagram { opacity: 0.28; }
-  }
+@page { size: A4 portrait; margin: 10mm; }
+html, body {
+  margin: 0; padding: 0;
+  width: 210mm; height: 297mm;
+  background: #fff;
+  color: #111;
+  font-family: "Noto Sans JP","Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+h1 {
+  font-size: 16pt;
+  color: #b32020;
+  border-bottom: 2px solid #b32020;
+  margin-bottom: 4mm;
+}
+h2 {
+  font-size: 12pt;
+  color: #222;
+  margin-top: 6mm;
+  border-left: 4px solid #b32020;
+  padding-left: 5px;
+}
+h3 {
+  font-size: 11pt;
+  margin-bottom: 2mm;
+  color: #111;
+}
+p {
+  margin: 2mm 0;
+  line-height: 1.6;
+}
+.memo {
+  border: 1px solid #aaa;
+  height: 22mm;
+  margin-top: 2mm;
+}
+.comment {
+  font-size: 10pt;
+  color: #333;
+  border-left: 3px solid #666;
+  padding-left: 6px;
+  margin-top: 2mm;
+  background: #f7f7f7;
+}
+.logic {
+  margin-top: 10mm;
+  border-top: 2px solid #000;
+  padding-top: 4mm;
+}
+.logic p {
+  font-size: 10pt;
+  line-height: 1.7;
+}
+.diagram {
+  width: 40%;
+  opacity: .35;
+  float: right;
+  margin-left: 6mm;
+}
 </style>
 </head>
 <body>
 
-<div class="page">
+<h1>Lesson01　骨盤 × 胸郭 トレーニングメモ（講師用）</h1>
 
-  <!-- 左：講師のロジックと記録欄 -->
-  <div class="main">
-    <h1>Lesson01　骨盤 × 胸郭 トレーニングメモ（講師用）</h1>
+<p><strong>テーマ：</strong>骨盤と胸郭の「上下分離」を体で理解し、動きの順番とリズムを再構築する。</p>
+<p><strong>狙い：</strong>上半身主導の癖をリセットし、“骨盤が先・胸郭があと”という流れを体で覚えさせる。<br>
+この回は「筋トレ」ではなく“動きの再学習”が目的。可動よりも「順序」が主題。</p>
 
-    <div class="section">
-      <h2>導入の狙い</h2>
-      <div class="logic">
-        ・野球動作における「骨盤と胸郭の連動」を体感させることが主目的。<br>
-        ・骨盤が先行し、胸郭がその動きを“受け渡す”リズムを理解させる。<br>
-        ・回旋動作の始動点を「骨盤」から「胸郭」へスムーズに伝える流れを確認する。
-      </div>
-    </div>
+<img class="diagram" src="../images/A_pair_of_black_and_white_anatomical_line_drawings.png" alt="骨盤と胸郭の線画">
 
-    <div class="section">
-      <h2>観察のポイント</h2>
-      <div class="logic">
-        ・骨盤が先に回り、胸郭が遅れて追従しているか。<br>
-        ・胸郭が単独で動きすぎていないか。<br>
-        ・呼吸（吸気・呼気）のタイミングと胸郭拡張の一致。<br>
-        ・左右の肋骨下部の動きに偏りがないか。
-      </div>
-    </div>
+<h2>① 動きを見て感じたこと</h2>
+<div class="memo"></div>
+<div class="comment">
+<strong>指導ポイント：</strong><br>
+・まず「見る力」を育てる。動きを分析する前に、“何が動いたか”を言葉にさせる。<br>
+・骨盤と胸郭の動きを区別して観察させ、「同時に動いてしまう」癖を認識させる。<br>
+・映像や他者の動きの中で「下が先に動く」瞬間を探させる。
+</div>
 
-    <div class="section">
-      <h2>指導トリガー</h2>
-      <div class="logic">
-        ・動きが固い場合：「骨盤を回そう」と言わず「胸郭を遅らせよう」と指示する。<br>
-        ・逆に胸郭が動かない場合は、腹部側の「開放」を促す cue を出す。<br>
-        ・「回す」よりも「流す」「連れる」「引き渡す」といった言葉を用いる。
-      </div>
-    </div>
+<h2>② 実際に動かして気づいたこと</h2>
+<div class="memo"></div>
+<div class="comment">
+<strong>指導ポイント：</strong><br>
+・動作中に「骨盤を先に動かす」と思った瞬間に、胸郭もつられて動く。<br>
+・その誤差を“ズレとして感じる”ことが大切。ズレ＝分離感覚の入口。<br>
+・特に「骨盤リード → 胸フォロー」の流れを、手足を使わず体幹で再現させる。
+</div>
 
-    <div class="section">
-      <h2>個別メモ</h2>
-      <div class="memo"></div>
-    </div>
-  </div>
+<h2>③ 次回までに意識したいこと</h2>
+<div class="memo"></div>
+<div class="comment">
+<strong>指導ポイント：</strong><br>
+・動きの目的を「再現すること」に置く。<br>
+・“正しい動き”より、“同じ動きを毎回出せるか”を基準にする。<br>
+・家での立位チェックや歩行でも、骨盤と胸郭のリズムを意識させる。
+</div>
 
-  <!-- 右：構造図＋観察チェック -->
-  <div class="side">
-    <div>
-      <img class="diagram" src="../lesson01/anatomy.png" alt="骨盤と胸郭の線画">
-      <div class="caption">構造を確認しながら観察メモをとる</div>
-    </div>
+<div class="logic">
+  <h3>【指導ロジック】</h3>
+  <p>
+  ・骨盤の先行動作が胸郭の遅延反応を誘発し、「ねじれと反発」を生む。<br>
+  ・骨格連鎖：寛骨 → 腰椎 → 胸椎 → 肩甲骨 → 上肢。<br>
+  ・目的は「骨盤を動かす」ではなく、「胸郭を遅らせる」。<br>
+  ・“骨盤が動いてから上半身がついてくる”という感覚を、全体の基礎に置く。
+  </p>
 
-    <div style="width:100%;">
-      <h3>観察チェックリスト</h3>
-      <table>
-        <tr><th>項目</th><th>YES</th><th>NO</th></tr>
-        <tr><td>骨盤の先行が見られた</td><td>☐</td><td>☐</td></tr>
-        <tr><td>胸郭が過剰に先行していない</td><td>☐</td><td>☐</td></tr>
-        <tr><td>胸郭拡張と吸気が一致している</td><td>☐</td><td>☐</td></tr>
-        <tr><td>左右対称な胸郭運動が確認できる</td><td>☐</td><td>☐</td></tr>
-      </table>
-    </div>
-  </div>
+  <h3>【生理学的意義】</h3>
+  <p>
+  ・インナーユニット（横隔膜・腹横筋・骨盤底筋・多裂筋）の協調制御を再教育。<br>
+  ・呼吸リズムと脊柱の弾性を統合し、体幹圧の自動調整を促す。<br>
+  ・骨盤の前傾時には胸郭の自然伸展、後傾時には屈曲を誘発。<br>
+  ・筋出力ではなく、運動順序による制御を重視。
+  </p>
 
+  <h3>【伝える言葉の例】</h3>
+  <p>
+  「動かす」ではなく「流す」。<br>
+  「力を入れる」ではなく「順番を作る」。<br>
+  「速く動かす」ではなく「先に動く部分を意識する」。<br>
+  これらを繰り返し伝えることで、選手の“思考の優先順位”が変わる。
+  </p>
 </div>
 
 </body>

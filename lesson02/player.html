@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson02 力を伝える体をつくる</title>
+<style>
+html, body {
+  margin: 0; padding: 0;
+  width: 297mm; height: 210mm;
+  background: #fff; color: #111;
+  font-family: "Noto Sans JP","Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  overflow: hidden;
+}
+.page{position:relative;width:285mm;height:198mm;margin:6mm;display:flex;flex-direction:row;justify-content:space-between;}
+.main{width:68%;display:flex;flex-direction:column;height:198mm;}
+h1{font-size:18pt;color:#c33;margin:0 0 6mm 2mm;font-weight:700}
+h2{font-size:11.5pt;border-left:4px solid #c33;padding-left:5px;margin:3mm 0 1.5mm}
+.memo{border:1px solid #999;height:32mm;margin-bottom:2.5mm}
+.memo.large{height:40mm}
+.spacer{flex:1 1 auto}
+.side{width:30%;position:relative;display:flex;align-items:center;}
+.qr{position:absolute;top:5mm;right:5mm;text-align:center}
+.qr img{width:28mm;height:28mm;display:block;margin:0 auto 1mm}
+.qr small{font-size:8pt;color:#333}
+.diagram{width:90%;opacity:.35;position:absolute;left:5%;top:57mm;}
+.caption{position:absolute;top:135mm;left:calc(5% + 45% + 15mm);transform:translateX(-50%);font-size:9pt;color:#555;text-align:center;white-space:nowrap;}
+table{width:100%;border-collapse:collapse;font-size:9.5pt;position:absolute;bottom:3mm;}
+th,td{border:1px solid #888;padding:3px;text-align:center}
+th{background:#f8f8f8}
+@page{size:A4 landscape;margin:0}
+@media print{html,body{transform:scale(0.94);transform-origin:top left}}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="main">
+    <h1>Lesson02　力を伝える体をつくる</h1>
+
+    <h2>① 力の流れを感じたこと</h2>
+    <div class="memo"></div>
+
+    <h2>② 地面から伝える感覚を意識したこと</h2>
+    <div class="memo"></div>
+
+    <h2>③ 今後に活かしたいこと</h2>
+    <div class="memo"></div>
+
+    <div class="spacer"></div>
+
+    <h2>自由メモ欄</h2>
+    <div class="memo large"></div>
+  </div>
+
+  <div class="side">
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://adjustment-commits.github.io/training-for-h-s-b-2025/" alt="QRコード">
+      <small>https://adjustment-commits.github.io/training-for-h-s-b-2025/</small>
+    </div>
+
+    <img class="diagram" src="A_pair_of_black_and_white_anatomical_line_drawings.png" alt="骨盤と胸郭の線画">
+    <div class="caption">骨盤と胸郭の位置関係をイメージしよう</div>
+
+    <table>
+      <tr><th>項目</th><th>◯</th><th>△</th><th>×</th></tr>
+      <tr><td>骨盤の動きを理解できた</td><td>☐</td><td>☐</td><td>☐</td></tr>
+      <tr><td>胸郭との連動を感じた</td><td>☐</td><td>☐</td><td>☐</td></tr>
+      <tr><td>左右差に気づいた</td><td>☐</td><td>☐</td><td>☐</td></tr>
+      <tr><td>動きを言葉で説明できる</td><td>☐</td><td>☐</td><td>☐</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>

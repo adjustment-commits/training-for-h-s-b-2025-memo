@@ -4,46 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lesson01 骨盤 × 胸郭 トレーニングメモ（選手用）</title>
+
+<!-- 共通スタイル -->
+<link rel="stylesheet" href="../shared/base.css">
+
 <style>
-  @page {
-    size: A4 landscape;
-    margin: 6mm;
-  }
-
-  html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #111;
-  }
-
-  .page {
-    display: grid;
-    grid-template-columns: 68% 32%;
-    column-gap: 10mm;
-    width: 285mm;
-    height: 198mm;
-    margin: 0 auto;
-  }
-
-  /* 左：記入欄ゾーン */
+  /* プレイヤー専用追加微調整（講師用とは独立） */
   .main {
     padding-left: 5mm;
     display: flex;
     flex-direction: column;
   }
 
-  h1 {
-    font-size: 18pt;
-    color: #c33;
-    font-weight: 700;
-    margin-bottom: 4px;
-  }
-
-  /* 上部の余白（氏名欄削除→思考スペースに） */
   .top-space {
     height: 35mm;
     border-bottom: 1px solid #ddd;
@@ -57,25 +29,6 @@
     justify-content: space-between;
   }
 
-  .section h2 {
-    font-size: 11.5pt;
-    color: #222;
-    margin-bottom: 3px;
-    border-left: 4px solid #c33;
-    padding-left: 6px;
-  }
-
-  .memo {
-    border: 1px solid #999;
-    height: 68px;
-    margin-bottom: 10px;
-  }
-
-  .memo.large {
-    height: 85px;
-  }
-
-  /* 右：構造と自己チェック */
   .side {
     display: flex;
     flex-direction: column;
@@ -84,85 +37,33 @@
     padding-top: 4mm;
     padding-bottom: 2mm;
   }
-
-  .diagram {
-    width: 100%;
-    opacity: 0.33;
-    margin-bottom: 5mm;
-  }
-
-  .caption {
-    font-size: 10pt;
-    text-align: center;
-    color: #444;
-    margin-top: -3mm;
-    margin-bottom: 5mm;
-  }
-
-  .side h3 {
-    font-size: 12pt;
-    font-weight: 700;
-    color: #111;
-    text-align: left;
-    width: 100%;
-    margin: 4px 0 3px;
-    border-left: 4px solid #c33;
-    padding-left: 6px;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 10pt;
-  }
-
-  th, td {
-    border: 1px solid #999;
-    padding: 4px;
-    text-align: center;
-  }
-
-  th {
-    background: #f8f8f8;
-    font-weight: 600;
-  }
-
-  @media print {
-    html, body {
-      width: 297mm;
-      height: 210mm;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-    .diagram { opacity: 0.28; }
-  }
 </style>
 </head>
 <body>
 
 <div class="page">
 
-  <!-- 左：思考と気づき -->
+  <!-- 左：気づき・思考ゾーン -->
   <div class="main">
     <h1>Lesson01　骨盤 × 胸郭 トレーニングメモ（選手用）</h1>
 
-    <!-- 思考スペース（氏名欄削除後） -->
+    <!-- 思考スペース（氏名・日付なし） -->
     <div class="top-space"></div>
 
     <div class="section">
       <div>
         <h2>① 動きを見て感じたこと</h2>
-        <div class="memo"></div>
+        <div class="memo medium"></div>
       </div>
 
       <div>
         <h2>② 実際に動かして気づいたこと</h2>
-        <div class="memo"></div>
+        <div class="memo medium"></div>
       </div>
 
       <div>
         <h2>③ 次回までに意識したいこと</h2>
-        <div class="memo"></div>
+        <div class="memo medium"></div>
       </div>
 
       <div>
@@ -172,12 +73,10 @@
     </div>
   </div>
 
-  <!-- 右：構造と評価 -->
+  <!-- 右：構造イメージと自己評価 -->
   <div class="side">
     <div>
-      <img class="diagram"
-        src="https://raw.githubusercontent.com/adjustment-commits/training-for-h-s-b-2025-memo/main/lesson01/A_pair_of_black_and_white_anatomical_line_drawings.png"
-        alt="骨盤と胸郭の線画">
+      <img class="diagram" src="../lesson01/anatomy.png" alt="骨盤と胸郭の線画">
       <div class="caption">骨盤と胸郭の位置関係をイメージしよう</div>
     </div>
 

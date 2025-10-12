@@ -6,16 +6,32 @@
 <title>Lesson01 骨盤 × 胸郭 トレーニングメモ（選手用）</title>
 <style>
   @page { size: A4 landscape; margin: 12mm; }
+
   body {
     font-family: 'Noto Sans JP', sans-serif;
     background: #fff;
     color: #111;
+    width: 100%;
+    max-width: 297mm;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* 右下に小さく配置するイメージ */
+  .diagram {
+    position: absolute;
+    bottom: 12mm;
+    right: 12mm;
+    width: 25%;          /* ← 控えめなサイズ感 */
+    opacity: 0.5;        /* ← 強調しすぎない */
+    z-index: 0;
   }
 
   h1 {
     font-size: 18pt;
     color: #c33;
     margin-bottom: 6px;
+    text-align: left;
   }
   .info {
     border-bottom: 1px solid #999;
@@ -27,7 +43,11 @@
     margin-right: 20px;
     font-size: 11pt;
   }
-  .section { margin-top: 12px; }
+  .section {
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+  }
   .section h2 {
     font-size: 12pt;
     color: #333;
@@ -51,19 +71,12 @@
     text-align: center;
   }
 
-  /* 画像の配置 */
-  .diagram {
-    display: block;
-    margin: 10px auto; /* ← 真ん中寄せ（端にしたければ margin-left:0;） */
-    width: 70%;        /* ← 大きさ調整 */
-    opacity: 0.85;     /* ← 少し淡く見せる */
-  }
-
   @media print {
-    .diagram {
-      width: 65%;
-      opacity: 0.8;
+    body {
       -webkit-print-color-adjust: exact;
+    }
+    .diagram {
+      opacity: 0.35; /* 印刷時はさらに淡く */
     }
   }
 </style>
@@ -89,9 +102,6 @@
   <div class="memo"></div>
 </div>
 
-<!-- ここに画像を入れる -->
-<img class="diagram" src="https://raw.githubusercontent.com/adjustment-commits/training-for-h-s-b-2025-memo/main/lesson01/A_pair_of_black_and_white_anatomical_line_drawings.png" alt="骨盤と胸郭の線画">
-
 <div class="section">
   <h2>自己チェック</h2>
   <table>
@@ -107,6 +117,9 @@
   <h2>自由メモ欄</h2>
   <div class="memo" style="height:80px;"></div>
 </div>
+
+<!-- イメージ：控えめに右下配置 -->
+<img class="diagram" src="https://raw.githubusercontent.com/adjustment-commits/training-for-h-s-b-2025-memo/main/lesson01/A_pair_of_black_and_white_anatomical_line_drawings.png" alt="骨盤と胸郭の線画">
 
 </body>
 </html>

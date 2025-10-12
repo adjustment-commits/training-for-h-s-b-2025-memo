@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lesson01 骨盤 × 胸郭 トレーニングメモ（講師用）</title>
+
+<!-- 共通CSSの読み込み（shared配下） -->
+<link rel="stylesheet" href="../shared/css/base.css">
+
 <style>
   @page {
     size: A4 landscape;
@@ -39,7 +43,7 @@
     font-size: 18pt;
     color: #c33;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .section {
@@ -54,16 +58,6 @@
     margin-bottom: 4px;
   }
 
-  .memo {
-    border: 1px solid #aaa;
-    height: 60px;
-    margin-bottom: 6px;
-  }
-
-  .memo.large {
-    height: 85px;
-  }
-
   .logic {
     font-size: 10.5pt;
     line-height: 1.6;
@@ -71,10 +65,16 @@
     border: 1px solid #bbb;
     padding: 8px 10px;
     background: #fafafa;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
-  /* 右：構造図と観察チェック */
+  .memo {
+    border: 1px solid #aaa;
+    height: 85px;
+    margin-top: 4px;
+  }
+
+  /* 右：図＋観察チェック */
   .side {
     display: flex;
     flex-direction: column;
@@ -86,7 +86,7 @@
 
   .diagram {
     width: 100%;
-    opacity: 0.35;
+    opacity: 0.33;
     margin-bottom: 4mm;
   }
 
@@ -133,7 +133,7 @@
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
-    .diagram { opacity: 0.3; }
+    .diagram { opacity: 0.28; }
   }
 </style>
 </head>
@@ -141,7 +141,7 @@
 
 <div class="page">
 
-  <!-- 左：講師用メインロジック -->
+  <!-- 左：講師のロジックと記録欄 -->
   <div class="main">
     <h1>Lesson01　骨盤 × 胸郭 トレーニングメモ（講師用）</h1>
 
@@ -175,16 +175,14 @@
 
     <div class="section">
       <h2>個別メモ</h2>
-      <div class="memo large"></div>
+      <div class="memo"></div>
     </div>
   </div>
 
-  <!-- 右：構造と観察記録 -->
+  <!-- 右：構造図＋観察チェック -->
   <div class="side">
     <div>
-      <img class="diagram"
-        src="https://raw.githubusercontent.com/adjustment-commits/training-for-h-s-b-2025-memo/main/lesson01/A_pair_of_black_and_white_anatomical_line_drawings.png"
-        alt="骨盤と胸郭の線画">
+      <img class="diagram" src="../lesson01/anatomy.png" alt="骨盤と胸郭の線画">
       <div class="caption">構造を確認しながら観察メモをとる</div>
     </div>
 

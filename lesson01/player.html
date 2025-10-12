@@ -6,126 +6,56 @@
 <title>Lesson01 骨盤 × 胸郭 トレーニングメモ（選手用）</title>
 <style>
 html, body {
-  margin: 0;
-  padding: 0;
-  width: 297mm;
-  height: 210mm;
-  background: #fff;
-  color: #111;
-  font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
+  margin: 0; padding: 0;
+  width: 297mm; height: 210mm;
+  background: #fff; color: #111;
+  font-family: "Noto Sans JP","Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
   overflow: hidden;
 }
-
-.page {
-  position: relative;
-  width: 285mm;
-  height: 198mm;
-  margin: 6mm;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.page{
+  position: relative; width: 285mm; height: 198mm; margin: 6mm;
+  display: flex; flex-direction: row; justify-content: space-between;
 }
 
-.main {
+/* 左：高さをページ内に固定し、スペーサーで最下端に吸着 */
+.main{
   width: 68%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  display: flex; flex-direction: column;
+  height: 198mm;             /* ← ページ内高さに合わせる */
+}
+h1{font-size:18pt;color:#c33;margin:0 0 6mm 2mm;font-weight:700}
+h2{font-size:11.5pt;border-left:4px solid #c33;padding-left:5px;margin:3mm 0 1.5mm}
+.memo{border:1px solid #999;height:32mm;margin-bottom:2.5mm}
+.memo.large{height:40mm}
+.spacer{flex:1 1 auto}       /* ← これが自由メモ欄を下端へ押し下げる */
+
+/* 右：位置は既存のまま（表はページ下端6mmに固定） */
+.side{
+  width: 30%; position: relative; display: flex; align-items: center;
+}
+.qr{position:absolute;top:5mm;right:5mm;text-align:center}
+.qr img{width:28mm;height:28mm;display:block;margin:0 auto 1mm}
+.qr small{font-size:8pt;color:#333}
+
+.diagram{
+  width:90%; opacity:.35; position:absolute; left:5%;
+  top:57mm;                 /* 頭の高さ＝「②」上端付近 */
+}
+.caption{
+  font-size:9pt;color:#555;text-align:center;margin-top:145mm;
 }
 
-h1 {
-  font-size: 18pt;
-  color: #c33;
-  margin: 0 0 6mm 2mm;
-  font-weight: 700;
+table{
+  width:100%; border-collapse:collapse; font-size:9.5pt;
+  position:absolute; bottom:6mm;   /* ← ページ下端6mmで固定 */
 }
+th,td{border:1px solid #888;padding:3px;text-align:center}
+th{background:#f8f8f8}
 
-h2 {
-  font-size: 11.5pt;
-  border-left: 4px solid #c33;
-  padding-left: 5px;
-  margin: 3mm 0 1.5mm;
-}
-
-.memo {
-  border: 1px solid #999;
-  height: 32mm;
-  margin-bottom: 2.5mm;
-}
-
-.memo.large { height: 40mm; }
-
-.side {
-  width: 30%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-/* ✅ QRコード（右上固定） */
-.qr {
-  position: absolute;
-  top: 5mm;
-  right: 5mm;
-  text-align: center;
-}
-.qr img {
-  width: 28mm;
-  height: 28mm;
-  display: block;
-  margin: 0 auto 1mm;
-}
-.qr small {
-  font-size: 8pt;
-  color: #333;
-}
-
-/* 骨格図：②の高さに合わせた */
-.diagram {
-  width: 90%;
-  opacity: 0.35;
-  position: absolute;
-  top: 52mm;
-  left: 5%;
-}
-
-/* キャプションは固定 */
-.caption {
-  font-size: 9pt;
-  color: #555;
-  text-align: center;
-  margin-top: 145mm;
-}
-
-/* ✅ チェック表を自由メモ欄下端と水平に合わせる */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 9.5pt;
-  position: absolute;
-  bottom: 6mm; /* ← 左の自由メモ欄下端（ページ下6mm余白と一致） */
-}
-
-th, td {
-  border: 1px solid #888;
-  padding: 3px;
-  text-align: center;
-}
-th {
-  background: #f8f8f8;
-}
-
-@page { size: A4 landscape; margin: 0; }
-
-@media print {
-  html, body {
-    transform: scale(0.94);
-    transform-origin: top left;
-  }
+@page{size:A4 landscape; margin:0}
+@media print{
+  html,body{transform:scale(0.94);transform-origin:top left}
 }
 </style>
 </head>
@@ -133,7 +63,7 @@ th {
 
 <div class="page">
 
-  <!-- 左側：メモ欄 -->
+  <!-- 左：記入欄（最下部に自由メモ欄が吸着） -->
   <div class="main">
     <h1>Lesson01　骨盤 × 胸郭 トレーニングメモ（選手用）</h1>
 
@@ -146,28 +76,23 @@ th {
     <h2>③ 次回までに意識したいこと</h2>
     <div class="memo"></div>
 
+    <div class="spacer"></div>  <!-- ← ここが下端合わせの肝 -->
+
     <h2>自由メモ欄</h2>
     <div class="memo large"></div>
   </div>
 
-  <!-- 右側：骨格図＋チェック表＋QR -->
+  <!-- 右：QR / 図 / チェック表 -->
   <div class="side">
 
-    <!-- QRコード -->
     <div class="qr">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://adjustment-commits.github.io/training-for-h-s-b-2025/"
-           alt="QRコード">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://adjustment-commits.github.io/training-for-h-s-b-2025/" alt="QRコード">
       <small>https://adjustment-commits.github.io/training-for-h-s-b-2025/</small>
     </div>
 
-    <!-- 骨格図 -->
-    <img class="diagram"
-         src="A_pair_of_black_and_white_anatomical_line_drawings.png"
-         alt="骨盤と胸郭の線画">
-
+    <img class="diagram" src="A_pair_of_black_and_white_anatomical_line_drawings.png" alt="骨盤と胸郭の線画">
     <div class="caption">骨盤と胸郭の位置関係をイメージしよう</div>
 
-    <!-- ✅ チェック表：左の自由メモ欄と最下部を揃える -->
     <table>
       <tr><th>項目</th><th>◯</th><th>△</th><th>×</th></tr>
       <tr><td>骨盤の動きを理解できた</td><td>☐</td><td>☐</td><td>☐</td></tr>

@@ -6,67 +6,67 @@
 <title>Lesson01 骨盤 × 胸郭 トレーニングメモ（選手用）</title>
 <style>
 /* ===============================
-   画面用（横A4レイアウトを固定表示）
+   iPad Safari 専用：A4横固定レイアウト
    =============================== */
-:root {
-  --page-w-px: 1123px; /* 297mm ≒ 1123px */
-  --page-h-px: 794px;  /* 210mm ≒ 794px */
-  --gap-px: 38px;      /* 約10mm */
-}
 
-* { box-sizing: border-box; }
+/* デバイス上でも印刷時でも「1枚の紙」として扱う */
 html, body {
   margin: 0;
   padding: 0;
+  width: 297mm;
+  height: 210mm;
   background: #fff;
   color: #111;
-  font-family: 'Noto Sans JP', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  overflow: hidden;
 }
 
+/* ページ領域固定 */
 .page {
-  width: var(--page-w-px);
-  min-height: var(--page-h-px);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 68% 32%;
-  column-gap: var(--gap-px);
+  position: relative;
+  width: 285mm;
+  height: 198mm;
+  margin: 6mm;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* 左ブロック */
+.main {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 18pt;
   color: #c33;
+  margin: 0 0 6mm 2mm;
   font-weight: 700;
-  margin: 12px 0 8px 16px;
-}
-
-.main {
-  padding: 0 12px 12px 16px;
-}
-
-.top-space {
-  height: 140px;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 12px;
 }
 
 h2 {
-  font-size: 18px;
-  margin: 0 0 6px;
-  border-left: 6px solid #c33;
-  padding-left: 8px;
+  font-size: 11.5pt;
+  border-left: 4px solid #c33;
+  padding-left: 5px;
+  margin: 3mm 0 1.5mm;
 }
 
 .memo {
   border: 1px solid #999;
-  background: #fff;
-  margin-bottom: 12px;
+  height: 32mm;
+  margin-bottom: 2.5mm;
 }
 
-.memo.medium { height: 120px; }
-.memo.large  { height: 150px; }
+.memo.large { height: 40mm; }
 
+/* 右ブロック（骨格図＋チェック） */
 .side {
-  padding: 18px 16px 14px 0;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -74,85 +74,44 @@ h2 {
 }
 
 .diagram {
-  width: 100%;
-  opacity: 0.33;
-  margin-bottom: 12px;
+  width: 90%;
+  opacity: 0.35;
+  margin-top: 2mm;
 }
 
 .caption {
-  font-size: 13px;
-  color: #444;
-  margin: -6px 0 14px;
+  font-size: 9pt;
+  color: #555;
   text-align: center;
+  margin-top: -3mm;
+  margin-bottom: 3mm;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 9.5pt;
 }
 
 th, td {
-  border: 1px solid #999;
-  padding: 6px;
+  border: 1px solid #888;
+  padding: 3px;
   text-align: center;
 }
 
 th {
   background: #f8f8f8;
-  font-weight: 600;
 }
 
-body { overflow-x: auto; }
-
-/* ===============================
-   印刷用（A4横1枚100%）
-   =============================== */
+/* 印刷用：1ページに強制収縮 */
 @page {
   size: A4 landscape;
-  margin: 6mm;
+  margin: 0;
 }
 
 @media print {
   html, body {
-    width: 297mm;
-    height: 210mm;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  .page {
-    width: 285mm;
-    height: 198mm;
-    column-gap: 10mm;
-  }
-
-  h1 {
-    font-size: 18pt;
-    margin-left: 5mm;
-  }
-
-  .top-space {
-    height: 35mm;
-    margin-bottom: 10px;
-  }
-
-  h2 {
-    font-size: 11.5pt;
-    border-left-width: 4px;
-    padding-left: 6px;
-  }
-
-  .memo.medium { height: 68mm; }
-  .memo.large  { height: 85mm; }
-
-  .diagram { opacity: 0.28; }
-  table { font-size: 10pt; }
-  th, td { padding: 4px; }
-
-  /* Safari印刷用：ページ1枚に強制縮小 */
-  body {
-    transform: scale(0.85);
+    transform: scale(0.94);
     transform-origin: top left;
   }
 }
@@ -160,40 +119,35 @@ body { overflow-x: auto; }
 </head>
 <body>
 
-<h1>Lesson01　骨盤 × 胸郭 トレーニングメモ（選手用）</h1>
-
 <div class="page">
 
-  <!-- 左：気づき・思考ゾーン -->
-  <section class="main">
-    <div class="top-space"></div>
+  <!-- 左ブロック -->
+  <div class="main">
+    <h1>Lesson01　骨盤 × 胸郭 トレーニングメモ（選手用）</h1>
 
-    <div>
-      <h2>① 動きを見て感じたこと</h2>
-      <div class="memo medium"></div>
+    <h2>① 動きを見て感じたこと</h2>
+    <div class="memo"></div>
 
-      <h2>② 実際に動かして気づいたこと</h2>
-      <div class="memo medium"></div>
+    <h2>② 実際に動かして気づいたこと</h2>
+    <div class="memo"></div>
 
-      <h2>③ 次回までに意識したいこと</h2>
-      <div class="memo medium"></div>
+    <h2>③ 次回までに意識したいこと</h2>
+    <div class="memo"></div>
 
-      <h2>自由メモ欄</h2>
-      <div class="memo large"></div>
-    </div>
-  </section>
+    <h2>自由メモ欄</h2>
+    <div class="memo large"></div>
+  </div>
 
-  <!-- 右：構造イメージと自己評価 -->
-  <aside class="side">
+  <!-- 右ブロック -->
+  <div class="side">
     <div>
       <img class="diagram"
-           src="A_pair_of_black_and_white_anatomical_line_drawings.png"
-           alt="骨盤と胸郭の線画">
+        src="A_pair_of_black_and_white_anatomical_line_drawings.png"
+        alt="骨盤と胸郭の線画">
       <div class="caption">骨盤と胸郭の位置関係をイメージしよう</div>
     </div>
 
     <div style="width:100%;">
-      <h2 style="margin:0 0 6px;border-left:6px solid #c33;padding-left:8px;font-size:18px">自己チェック</h2>
       <table>
         <tr><th>項目</th><th>◯</th><th>△</th><th>×</th></tr>
         <tr><td>骨盤の動きを理解できた</td><td>☐</td><td>☐</td><td>☐</td></tr>
@@ -202,7 +156,8 @@ body { overflow-x: auto; }
         <tr><td>動きを言葉で説明できる</td><td>☐</td><td>☐</td><td>☐</td></tr>
       </table>
     </div>
-  </aside>
+  </div>
+
 </div>
 
 </body>

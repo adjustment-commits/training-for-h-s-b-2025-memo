@@ -60,27 +60,44 @@ h2 {
   align-items: center;
 }
 
+/* ✅ QRコード（骨格図の上に配置） */
+.qr {
+  position: absolute;
+  top: 5mm;         /* ページ上端からの距離 */
+  right: 5mm;       /* ページ右端からの距離 */
+  text-align: center;
+}
+.qr img {
+  width: 28mm;
+  height: 28mm;
+  display: block;
+  margin: 0 auto 1mm;
+}
+.qr small {
+  font-size: 8pt;
+  color: #333;
+}
+
+/* 骨格図 */
 .diagram {
   width: 90%;
   opacity: 0.35;
   position: absolute;
-  top: 62mm;
+  top: 42mm; /* ← QRコードより下に配置 */
   left: 5%;
 }
-
 .caption {
   font-size: 9pt;
   color: #555;
   text-align: center;
   margin-top: 145mm;
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
   font-size: 9.5pt;
   position: absolute;
-  bottom: 20mm;
+  bottom: 0;
 }
 th, td {
   border: 1px solid #888;
@@ -91,23 +108,6 @@ th {
   background: #f8f8f8;
 }
 
-/* ✅ QRコード配置（右下固定） */
-.qr {
-  position: absolute;
-  bottom: 5mm;
-  right: 5mm;
-  text-align: center;
-  font-size: 8pt;
-  color: #333;
-}
-.qr img {
-  width: 30mm;
-  height: 30mm;
-  display: block;
-  margin: 0 auto 2mm;
-}
-
-/* 印刷調整 */
 @page { size: A4 landscape; margin: 0; }
 @media print {
   html, body { transform: scale(0.94); transform-origin: top left; }
@@ -137,6 +137,14 @@ th {
 
   <!-- 右側：骨格図＋チェック表＋QR -->
   <div class="side">
+
+    <!-- ✅ QRコード -->
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://adjustment-commits.github.io/training-for-h-s-b-2025/"
+           alt="QRコード">
+      <small>https://adjustment-commits.github.io/training-for-h-s-b-2025/</small>
+    </div>
+
     <img class="diagram"
          src="A_pair_of_black_and_white_anatomical_line_drawings.png"
          alt="骨盤と胸郭の線画">
@@ -149,13 +157,6 @@ th {
       <tr><td>左右差に気づいた</td><td>☐</td><td>☐</td><td>☐</td></tr>
       <tr><td>動きを言葉で説明できる</td><td>☐</td><td>☐</td><td>☐</td></tr>
     </table>
-
-    <!-- ✅ QRコード（右下固定） -->
-    <div class="qr">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://adjustment-commits.github.io/training-for-h-s-b-2025/"
-           alt="QRコード">
-      <div>https://adjustment-commits.github.io/training-for-h-s-b-2025/</div>
-    </div>
   </div>
 
 </div>

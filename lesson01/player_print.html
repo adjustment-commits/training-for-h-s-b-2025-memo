@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lesson01 骨盤 × 胸郭 トレーニングメモ（選手用）</title>
 <style>
-  /* ========== A4横固定設定 ========== */
+  /* ========== A4横／余白最小化設定 ========== */
   @page {
     size: A4 landscape;
-    margin: 10mm; /* ← プリンター余白を考慮しつつ最大限広く */
+    margin: 4mm; /* ← 最小限の印刷余白 */
   }
 
   html, body {
@@ -25,17 +25,17 @@
   /* ========== 全体レイアウト ========== */
   .page {
     display: grid;
-    grid-template-columns: 72% 28%;  /* 左：記入欄／右：図と表 */
-    column-gap: 12mm;
-    width: 277mm;   /* A4横（297mm）- 両サイド余白20mm */
-    height: 190mm;  /* A4高さ210mm - 上下余白20mm */
+    grid-template-columns: 71% 29%; /* 左：記入欄／右：図と表 */
+    column-gap: 10mm;
+    width: 289mm;   /* A4横 297mm - 左右余白4mm×2 */
+    height: 202mm;  /* A4縦 210mm - 上下余白4mm×2 */
     margin: 0 auto;
     padding: 0;
   }
 
   /* 左側：記入欄 */
   .main {
-    padding-left: 5mm;
+    padding-left: 3mm;
     padding-right: 2mm;
   }
 
@@ -48,34 +48,34 @@
 
   .info {
     border-bottom: 1px solid #aaa;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     padding-bottom: 4px;
     font-size: 11pt;
   }
 
   .info span {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 18px;
   }
 
   .section {
-    margin-top: 8px;
+    margin-top: 6px;
   }
 
   .section h2 {
     font-size: 11.5pt;
     color: #111;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
 
   .memo {
     border: 1px solid #999;
     height: 50px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .memo.large {
-    height: 70px;
+    height: 68px;
   }
 
   /* 右側：イラスト＋自己チェック */
@@ -88,9 +88,9 @@
   }
 
   .diagram {
-    width: 95%;
+    width: 100%;
     opacity: 0.28;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .side h3 {
@@ -99,7 +99,7 @@
     color: #111;
     text-align: left;
     width: 100%;
-    margin: 4px 0 2px;
+    margin: 2px 0 2px;
   }
 
   table {
@@ -110,7 +110,7 @@
 
   th, td {
     border: 1px solid #999;
-    padding: 4px;
+    padding: 3px;
     text-align: center;
   }
 
@@ -119,18 +119,17 @@
     font-weight: 600;
   }
 
-  /* 印刷時に100%スケール維持 */
+  /* 印刷時100%スケール維持 */
   @media print {
     html, body {
       width: 297mm;
       height: 210mm;
-      margin: 0;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
     .page {
-      width: 277mm;
-      height: 190mm;
+      width: 289mm;
+      height: 202mm;
     }
     .diagram {
       opacity: 0.25;
